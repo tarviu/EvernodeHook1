@@ -9,7 +9,7 @@ https://github.com/Transia-RnD/xhs-library/tree/main/contracts/redirect
 
 ## Setup
 
-    git clone https://github.com/MrKnowItAlll/SetEevernodeHook.git
+    git clone https://github.com/tarviu/EvernodeHook.git
     cd SetEevernodeHook
     nvm install 16
     nvm use 16
