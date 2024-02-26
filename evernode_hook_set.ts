@@ -86,7 +86,7 @@ export async function main(): Promise<void> {
         seed: myWallet.seed,
         hooks: [{ Hook: hookPayload }],
       } as SetHookParams);
-      console.log("Hook set successfully.");
+      console.log("Hook fet FARMIAUS!.");
     } catch (error) {
       console.error("Error setting hook:", error);
     }
