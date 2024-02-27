@@ -80,7 +80,7 @@ export async function main(): Promise<void> {
 
 
     try {
-      console.log("Setting hook...");
+      console.log("OBESSSS...");
       await setHooksV3({
         client: client,
         seed: myWallet.seed,
