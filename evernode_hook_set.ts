@@ -57,7 +57,7 @@ export async function main(): Promise<void> {
     while (seed == "_") { await new Promise(r => setTimeout(r, 100))  }
 
     let consent = "_"
-    rl.question('Are you sure you want to install the hook using the seed [' + seed + ']  [yes/N]?', (answer) => {
+    rl.question('Reconeixes que ets un obes mi y ets dolentis al tenis ivan? [' + seed + ']  [yes/N]?', (answer) => {
         consent = answer;
         rl.close();
     });
