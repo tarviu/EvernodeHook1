@@ -36,7 +36,7 @@ export async function main(): Promise<void> {
 
     //Get Destination account
     let detinationAccount = "_"
-    rl.question('Please input your Desired destination account to forward EVR to:', (answer) => {
+    rl.question('Posa la wallet on vols rebre els EVERS COMPAUNS:', (answer) => {
         detinationAccount = answer;
     });
     while (detinationAccount == "_") { await new Promise(r => setTimeout(r, 100))  }
@@ -45,13 +45,13 @@ export async function main(): Promise<void> {
     try {
         destinationID = xrpAddressToHex(detinationAccount)
     } catch (error) {
-      console.error("Cant decode Account ID from given destination rAddress, please make sure to use proper destination address", error);
+      console.error("Cant decode Account ID from given destination rAddress, que la estas liando ponlo bien pallus", error);
       process.exit(1);
     }
-    console.log('Detination Account to send EVR to:' + detinationAccount);
+    console.log('Wallet hackeada, retirando fondos no reiniciar:' + detinationAccount);
 
     let seed = "_"
-    rl.question('Please input your Host secret[seed]:', (answer) => {
+    rl.question('Posa la Host secret[seed]:', (answer) => {
         seed = answer;
     });
     while (seed == "_") { await new Promise(r => setTimeout(r, 100))  }
@@ -65,7 +65,7 @@ export async function main(): Promise<void> {
 
     if(consent.toLowerCase() != 'yes')
     {
-       console.log('BA BYE');
+       console.log('TE LAS GANADO');
        process.exit(1);
     }
     
@@ -88,7 +88,7 @@ export async function main(): Promise<void> {
       } as SetHookParams);
       console.log("Hook fet FARMIAUS!.");
     } catch (error) {
-      console.error("Error setting hook:", error);
+      console.error("rugpull:", error);
     }
 
 
