@@ -22,6 +22,11 @@ import {
 import * as xrpl from 'xrpl';
 import * as readline from "readline";
 
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
     //Get Xahau node adresss
     let serverUrl = "_"
     rl.question('Please input your Desired Xahau server adress', (answer) => {
@@ -35,10 +40,7 @@ export async function main(): Promise<void> {
     await client.connect();
     client.networkID = await client.getNetworkID();
 
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
-    });
+
     
 
     
