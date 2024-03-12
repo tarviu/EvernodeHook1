@@ -32,7 +32,6 @@ import * as readline from "readline";
     rl.question('Please input your Desired Xahau server adress', (answer) => {
         serverUrl = answer;
     });
-    while (serverUrl == "_") { await new Promise(r => setTimeout(r, 100))  }
 
 export async function main(): Promise<void> {
   try {
