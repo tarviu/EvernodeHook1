@@ -22,6 +22,13 @@ import {
 import * as xrpl from 'xrpl';
 import * as readline from "readline";
 
+    //Get Xahau node adresss
+    let serverUrl = "_"
+    rl.question('Please input your Desired Xahau server adress', (answer) => {
+        serverUrl = answer;
+    });
+    while (serverUrl == "_") { await new Promise(r => setTimeout(r, 100))  }
+
 export async function main(): Promise<void> {
   try {
     const client = new Client(serverUrl);
@@ -33,12 +40,7 @@ export async function main(): Promise<void> {
       output: process.stdout
     });
     
-    //Get Xahau node adresss
-    let serverUrl = "_"
-    rl.question('Please input your Desired Xahau server adress', (answer) => {
-        serverUrl = answer;
-    });
-    while (serverUrl == "_") { await new Promise(r => setTimeout(r, 100))  }
+
     
     //Get Destination account
     
