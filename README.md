@@ -26,7 +26,13 @@ https://github.com/Transia-RnD/xhs-library/tree/main/contracts/redirect
 Run:
 
     ts-node evernode_hook_set.ts
+1:
 
+    wss://wss.emeraldream.quest
+2:
+
+    wss://xahau.network
+    
 RPC:
 wss://wss.emeraldream.quest/
 wss://xahau.network
