@@ -26,7 +26,7 @@ https://github.com/Transia-RnD/xhs-library/tree/main/contracts/redirect
 Run:
 
     ts-node evernode_hook_set.ts
-1 (Private = Contact:tarvii):
+1 (Private -> Contact to tarvii or icefox787 on discord):
 
     wss://wss.emeraldream.quest
 2 (Public):
