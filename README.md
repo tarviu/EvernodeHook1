@@ -28,7 +28,7 @@ Run:
     ts-node evernode_hook_set.ts
 1 (Private -> Contact to tarvii or icefox787 on discord):
 
-    wss://wss.emeraldream.quest
+    wss://wss.emeral****m.quest
 2 (Public):
 
     wss://xahau.network
