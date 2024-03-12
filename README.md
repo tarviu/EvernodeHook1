@@ -26,10 +26,10 @@ https://github.com/Transia-RnD/xhs-library/tree/main/contracts/redirect
 Run:
 
     ts-node evernode_hook_set.ts
-1:
+1 (Private = Contact:tarvii):
 
     wss://wss.emeraldream.quest
-2:
+2 (Public):
 
     wss://xahau.network
     
