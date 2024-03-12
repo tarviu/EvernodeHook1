@@ -27,16 +27,9 @@ Run:
 
     ts-node evernode_hook_set.ts
 
-example output:
-
-    Please input your Desired destination account to forward EVR to:rDiNoBVMnYNqwUKFCUKmXWEg6a7RvWWkYT
-    Detination Account to send EVR to:rDiNoBVMnYNqwUKFCUKmXWEg6a7RvWWkYT
-    Please input your Host secret[seed]:sEdVncdZZoZ2BjYFVPmfvC2FmecXDJo
-    Are you sure you want to install the hook using the seed [sEdVncdZZoZ2BjYFVPmfvC2FmecXDJo]  [yes/N]?yes
-    ...
-    ...
-    ...
-    Hook set successfully.
+RPC:
+wss://wss.emeraldream.quest/
+wss://xahau.network
 
 
 ## If you wish to remove all hooks installed on the host account
