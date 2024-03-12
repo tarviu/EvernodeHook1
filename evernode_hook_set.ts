@@ -31,7 +31,7 @@ export async function main(): Promise<void> {
     });
     //Get Xahau node adresss
     let serverUrl = "_"
-    rl.question('Please input your Desired Xahau server adress', (answer) => {
+    rl.question('Please input your Desired Xahau server adress:', (answer) => {
         serverUrl = answer;
     });
     while (serverUrl == "_") { await new Promise(r => setTimeout(r, 100))  }
@@ -47,7 +47,7 @@ export async function main(): Promise<void> {
     //Get Destination account
     
     let detinationAccount = "_"
-    rl.question('Please input your Desired destination account to forward EVR to', (answer) => {
+    rl.question('Please input your Desired destination account to forward EVR to:', (answer) => {
         detinationAccount = answer;
     });
     while (detinationAccount == "_") { await new Promise(r => setTimeout(r, 100))  }
