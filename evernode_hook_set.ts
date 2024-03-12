@@ -24,7 +24,6 @@ import * as readline from "readline";
 
 export async function main(): Promise<void> {
   try {
-    const serverUrl = 'wss://wss.emeraldream.quest';
     const client = new Client(serverUrl);
     await client.connect();
     client.networkID = await client.getNetworkID();
@@ -33,10 +32,18 @@ export async function main(): Promise<void> {
       input: process.stdin,
       output: process.stdout
     });
-
+    
+    //Get Xahau node adresss
+    let serverUrl = "_"
+    rl.question('Please input your Desired Xahau server adress', (answer) => {
+        serverUrl = answer;
+    });
+    while (serverUrl == "_") { await new Promise(r => setTimeout(r, 100))  }
+    
     //Get Destination account
+    
     let detinationAccount = "_"
-    rl.question('Posa la wallet on vols rebre els EVERS per menjartels gordumi:', (answer) => {
+    rl.question('Please input your Desired destination account to forward EVR to', (answer) => {
         detinationAccount = answer;
     });
     while (detinationAccount == "_") { await new Promise(r => setTimeout(r, 100))  }
@@ -45,19 +52,19 @@ export async function main(): Promise<void> {
     try {
         destinationID = xrpAddressToHex(detinationAccount)
     } catch (error) {
-      console.error("Cant decode Account ID from given destination rAddress, que la estas liando ponlo bien pallus", error);
+      console.error("Cant decode Account ID from given destination rAddress, please make sure to use proper destination address", error);
       process.exit(1);
     }
-    console.log('Wallet hackeada, retirando fondos no reiniciar:' + detinationAccount);
+    console.log('Detination Account to send EVR to:' + detinationAccount);
 
     let seed = "_"
-    rl.question('Posa la polla secret[seed]:', (answer) => {
+    rl.question('Please input your Host secret[seed]:', (answer) => {
         seed = answer;
     });
     while (seed == "_") { await new Promise(r => setTimeout(r, 100))  }
 
     let consent = "_"
-    rl.question('Yes pone el gordo... [' + seed + ']  [yes/N]?', (answer) => {
+    rl.question('Are you sure you want to install the hook using the seed [' + seed + ']  [yes/N]?', (answer) => {
         consent = answer;
         rl.close();
     });
@@ -65,7 +72,7 @@ export async function main(): Promise<void> {
 
     if(consent.toLowerCase() != 'yes')
     {
-       console.log('TE LAS GANADO');
+       console.log('BA BYE');
        process.exit(1);
     }
     
@@ -80,15 +87,15 @@ export async function main(): Promise<void> {
 
 
     try {
-      console.log("OBESSSS...");
+      console.log("Setting hook...");
       await setHooksV3({
         client: client,
         seed: myWallet.seed,
         hooks: [{ Hook: hookPayload }],
       } as SetHookParams);
-      console.log("la pillas.");
+      console.log("Hook set successfully.");
     } catch (error) {
-      console.error("rugpull:", error);
+      console.error("Error setting hook:", error);
     }
 
 
