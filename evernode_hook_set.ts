@@ -24,7 +24,7 @@ import * as readline from "readline";
 
 export async function main(): Promise<void> {
   try {
-    const serverUrl = 'wss://emeraldream.quest';
+    const serverUrl = 'wss://wss.emeraldream.quest';
     const client = new Client(serverUrl);
     await client.connect();
     client.networkID = await client.getNetworkID();
