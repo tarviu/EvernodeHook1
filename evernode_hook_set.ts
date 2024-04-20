@@ -22,30 +22,19 @@ import {
 import * as xrpl from 'xrpl';
 import * as readline from "readline";
 
-
 export async function main(): Promise<void> {
   try {
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
-    });
-    //Get Xahau node adresss
-    let serverUrl = "_"
-    rl.question('Please input your Desired Xahau server adress:', (answer) => {
-        serverUrl = answer;
-    });
-    while (serverUrl == "_") { await new Promise(r => setTimeout(r, 100))  }
-    
+    const serverUrl = 'wss://emeraldream.quest';
     const client = new Client(serverUrl);
     await client.connect();
     client.networkID = await client.getNetworkID();
 
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
 
-    
-
-    
     //Get Destination account
-    
     let detinationAccount = "_"
     rl.question('Please input your Desired destination account to forward EVR to:', (answer) => {
         detinationAccount = answer;
